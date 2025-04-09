@@ -1,8 +1,7 @@
 from tokenizer.TextTokenizer import TextTokenizer
-import json;
 
 def main():
-    text = 'My Name is Piyush 😂 ❤️ Khandelwal 😎. I\'m an software developer 💻 .';
+    text = 'My Name is Piyush 😂 ❤️ Khandelwal 😎. I\'m an software developer Hanji 💻 .';
 
     hindi_text = 'नमन अच्छा लड़का नहीं है';
 

@@ -44,6 +44,7 @@ class TextTokenizer:
 
     def __save_new_encode_value(self, token, value):
         self.__vocab[token] = value;
+        self.__decode_vocab[value] = token;
         write_json_file(self.__FILE_PATH__, self.__vocab);
 
     def __get_new_encoding(self, token):
