@@ -1,35 +1,14 @@
-from tokenizer.TextTokenizer import TextTokenizer
+from gemini_chat import cot as gemini_cot, persona as gemini_persona
+from openai_chat import cot as open_ai_cot, persona as open_ai_persona, agent
 
 def main():
-    text = 'My Name is Piyush 😂 ❤️ Khandelwal 😎. I\'m an software developer Hanji 💻 .';
+    # open_ai_cot.invokeChat();
+    # open_ai_persona.invokeChat();
+    
+    # gemini_cot.invokeChat();
+    # gemini_persona.invokeChat();
 
-    hindi_text = 'नमन अच्छा लड़का नहीं है';
-
-    hindi_tokenizer_text(hindi_text);
-
-    eng_tokenizer_text(text)
-
-def eng_tokenizer_text(text):
-    print(text);
-    tokenizer = TextTokenizer(text, 'english');
-
-    encodings = tokenizer.encode();
-    print(encodings)
-
-    real_text = tokenizer.decode(encodings);
-    print(real_text);
-
-def hindi_tokenizer_text(text):
-    print(text);
-    tokenizer = TextTokenizer(text, 'hindi');
-
-    encodings = tokenizer.encode();
-    print(encodings)
-
-    real_text = tokenizer.decode(encodings);
-    print(real_text);
-
-    print(tokenizer.get_vocab_size())
-
+    agent.invokeChat();
+    
 if __name__ == "__main__":
     main()
